@@ -10,7 +10,7 @@
 * **Escuela:** Ingeniería en Computación y Telecomunicaciones
 * **Asignatura:** Desarrollo de Aplicaciones Móviles
 * **Docente:** Freddy Peña (`fr.pena@ce.pucmm.edu.do`)
-* **Estudiante:** Diaurys (GitHub: [`diaurys17`](https://github.com/diaurys17))
+* **Estudiante:** Diaurys Gomez Almonte(GitHub: [`diaurys17`](https://github.com/diaurys17))
 * **Repositorio Oficial:** [https://github.com/diaurys17/pokedex-offline-first](https://github.com/diaurys17/pokedex-offline-first)
 * **Alcance de esta entrega:** $\approx 40\%$ del proyecto final (Fundamentos arquitectónicos, persistencia y offline-first).
 

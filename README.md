@@ -10,8 +10,8 @@
 * **Escuela:** Ingeniería en Computación y Telecomunicaciones
 * **Asignatura:** Desarrollo de Aplicaciones Móviles
 * **Docente:** Freddy Peña (`fr.pena@ce.pucmm.edu.do`)
-* **Estudiante:** Diaurys (GitHub: [`diaurys`](https://github.com/diaurys))
-* **Repositorio Oficial:** [https://github.com/diaurys/pokedex-offline-first](https://github.com/diaurys/pokedex-offline-first)
+* **Estudiante:** Diaurys (GitHub: [`diaurys17`](https://github.com/diaurys17))
+* **Repositorio Oficial:** [https://github.com/diaurys17/pokedex-offline-first](https://github.com/diaurys17/pokedex-offline-first)
 * **Alcance de esta entrega:** $\approx 40\%$ del proyecto final (Fundamentos arquitectónicos, persistencia y offline-first).
 
 ---
@@ -298,7 +298,7 @@ A diferencia de las interfaces móviles convencionales (que imitan plástico roj
 ### Pasos:
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/diaurys/pokedex-offline-first.git
+   git clone https://github.com/diaurys17/pokedex-offline-first.git
    cd pokedex-offline-first
    ```
 2. Instalar dependencias:

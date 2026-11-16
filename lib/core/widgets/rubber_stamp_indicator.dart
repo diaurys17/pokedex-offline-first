@@ -128,12 +128,14 @@ class _RubberStampIndicatorState extends ConsumerState<RubberStampIndicator>
               Row(
                 children: [
                   const Icon(Icons.history, size: 16, color: PaperColors.inkSecondaryLight),
-                  const SizedBox(width: 6),
-                  Text(
-                    'Última sincronización: $syncInfo',
-                    style: PaperTypography.typewriter(
-                      fontSize: 12,
-                      color: PaperColors.inkSecondaryLight,
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Última sincronización: $syncInfo',
+                      style: PaperTypography.typewriter(
+                        fontSize: 11,
+                        color: PaperColors.inkSecondaryLight,
+                      ),
                     ),
                   ),
                 ],
@@ -142,12 +144,14 @@ class _RubberStampIndicatorState extends ConsumerState<RubberStampIndicator>
               Row(
                 children: [
                   const Icon(Icons.storage, size: 16, color: PaperColors.stampGreen),
-                  const SizedBox(width: 6),
-                  Text(
-                    'Persistencia: Drift SQLite (Offline-First)',
-                    style: PaperTypography.typewriter(
-                      fontSize: 12,
-                      color: PaperColors.stampGreen,
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Persistencia: Drift SQLite (Offline-First)',
+                      style: PaperTypography.typewriter(
+                        fontSize: 11,
+                        color: PaperColors.stampGreen,
+                      ),
                     ),
                   ),
                 ],
@@ -157,11 +161,14 @@ class _RubberStampIndicatorState extends ConsumerState<RubberStampIndicator>
                 width: double.infinity,
                 child: OutlinedButton.icon(
                   icon: const Icon(Icons.sync, size: 18),
-                  label: Text(
-                    'FORZAR SINCRONIZACIÓN CON POKÉAPI',
-                    style: PaperTypography.typewriter(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
+                  label: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      'SINCRONIZAR CON POKÉAPI',
+                      style: PaperTypography.typewriter(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   style: OutlinedButton.styleFrom(

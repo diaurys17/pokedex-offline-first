@@ -194,7 +194,6 @@ Durante la presentación del avance ante el docente, se verifican en vivo los es
 
 ```
 lib/
-├── app/
 ├── core/
 │   ├── constants/
 │   │   ├── api_constants.dart          # URLs, timeouts y endpoints GraphQL v1beta2
@@ -213,8 +212,7 @@ lib/
 │   │   ├── app_database.dart           # DriftDatabase con índices e inicialización SQLite/Wasm
 │   │   └── app_database.g.dart         # Código generado por drift_dev
 │   ├── errors/
-│   │   ├── exceptions.dart             # Excepciones de red, servidor y BD
-│   │   └── failures.dart               # Fallos de dominio
+│   │   └── exceptions.dart             # Excepciones de red, servidor y BD
 │   ├── network/
 │   │   ├── api_health_service.dart     # Monitor de disponibilidad de PokéAPI
 │   │   ├── connectivity_service.dart   # Monitor de conectividad física
@@ -244,7 +242,7 @@ lib/
 │           ├── providers/
 │           │   └── catalog_provider.dart           # StreamProvider reactivo sobre SQLite
 │           ├── screens/
-│           │   └── catalog_screen.dart             # Catálogo analógico con los 4 estados
+│           │   └── catalog_screen.dart             # Catálogo analógico con los 3 estados
 │           └── widgets/
 │               ├── paperclip_widget.dart           # Clip de latón vintage para favoritos
 │               ├── risograph_artwork.dart          # Duotono risográfico con desalineado

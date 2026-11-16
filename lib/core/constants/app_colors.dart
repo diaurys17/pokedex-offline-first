@@ -47,4 +47,8 @@ class AppColors {
   static String codeForType(String typeName) {
     return PaperColors.codeForType(typeName);
   }
+
+  static String spanishNameForType(String typeName) {
+    return PaperColors.spanishNameForType(typeName);
+  }
 }

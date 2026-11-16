@@ -118,6 +118,28 @@ class PaperColors {
     'fairy': 'HAD',
   };
 
+  // Nombres completos oficiales en español
+  static const Map<String, String> typeSpanishNames = {
+    'normal': 'NORMAL',
+    'fire': 'FUEGO',
+    'water': 'AGUA',
+    'grass': 'PLANTA',
+    'electric': 'ELÉCTRICO',
+    'ice': 'HIELO',
+    'fighting': 'LUCHA',
+    'poison': 'VENENO',
+    'ground': 'TIERRA',
+    'flying': 'VOLADOR',
+    'psychic': 'PSÍQUICO',
+    'bug': 'BICHO',
+    'rock': 'ROCA',
+    'ghost': 'FANTASMA',
+    'dragon': 'DRAGÓN',
+    'dark': 'SINIESTRO',
+    'steel': 'ACERO',
+    'fairy': 'HADA',
+  };
+
   static Color pigmentForType(String type) {
     return typePigments[type.toLowerCase()] ?? const Color(0xFF666355);
   }
@@ -128,6 +150,10 @@ class PaperColors {
 
   static String codeForType(String type) {
     return typeCodes[type.toLowerCase()] ?? type.toUpperCase();
+  }
+
+  static String spanishNameForType(String type) {
+    return typeSpanishNames[type.toLowerCase()] ?? type.toUpperCase();
   }
 }
 

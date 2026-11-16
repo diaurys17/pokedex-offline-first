@@ -147,7 +147,7 @@ class PokemonCard extends ConsumerWidget {
                               Text(glyph, style: TextStyle(color: color, fontSize: 13)),
                               const SizedBox(width: 5),
                               Text(
-                                type.toUpperCase(),
+                                AppColors.spanishNameForType(type),
                                 style: PaperTypography.typewriter(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w900,

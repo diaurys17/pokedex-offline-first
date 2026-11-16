@@ -17,10 +17,12 @@ void main() {
         final pigment = PaperColors.pigmentForType(type);
         final glyph = PaperColors.glyphForType(type);
         final code = PaperColors.codeForType(type);
+        final spanish = PaperColors.spanishNameForType(type);
 
         expect(pigment, isNotNull);
         expect(glyph, isNotEmpty);
         expect(code.length, 3);
+        expect(spanish, isNotEmpty);
       }
     });
 

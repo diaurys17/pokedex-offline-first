@@ -72,6 +72,11 @@ final favoritesRepositoryProvider = Provider<FavoritesRepository>((ref) {
   return FavoritesRepositoryImpl(ref.watch(favoritesDaoProvider));
 });
 
+/// Stream reactivo por espécimen individual para actualizar favoritos en tiempo real (<15ms)
+final isFavoriteProvider = StreamProvider.family<bool, int>((ref, pokemonId) {
+  return ref.watch(favoritesRepositoryProvider).watchIsFavorite(pokemonId);
+});
+
 // --- Indicador Global de Conectividad (IND-01 a IND-05) ---
 final connectivityIndicatorProvider =
     StreamNotifierProvider<ConnectivityIndicatorNotifier, ConnectivityIndicatorState>(() {

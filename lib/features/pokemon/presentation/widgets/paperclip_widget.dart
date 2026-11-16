@@ -24,11 +24,16 @@ class PaperclipWidget extends StatelessWidget {
         message: isFavorite
             ? 'Retirar clip (Quitar de favoritos)'
             : 'Enganchar clip (Marcar favorito)',
-        child: SizedBox(
-          width: size,
-          height: size * 1.5,
-          child: CustomPaint(
-            painter: _BrassClipPainter(isFavorite: isFavorite),
+        child: AnimatedScale(
+          scale: isFavorite ? 1.08 : 1.0,
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeOutBack,
+          child: SizedBox(
+            width: size,
+            height: size * 1.5,
+            child: CustomPaint(
+              painter: _BrassClipPainter(isFavorite: isFavorite),
+            ),
           ),
         ),
       ),

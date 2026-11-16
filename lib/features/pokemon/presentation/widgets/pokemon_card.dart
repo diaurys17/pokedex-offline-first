@@ -94,12 +94,15 @@ class PokemonCard extends ConsumerWidget {
                           ),
                         ],
                       ),
-                      PaperclipWidget(
-                        size: 32,
-                        isFavorite: pokemon.isFavorite,
-                        onTap: () {
-                          _onToggleFavorite(ref);
-                          Navigator.pop(ctx);
+                      Consumer(
+                        builder: (context, modalRef, _) {
+                          final modalFav = modalRef.watch(isFavoriteProvider(pokemon.id)).value ??
+                              pokemon.isFavorite;
+                          return PaperclipWidget(
+                            size: 32,
+                            isFavorite: modalFav,
+                            onTap: () => _onToggleFavorite(modalRef),
+                          );
                         },
                       ),
                     ],
@@ -251,9 +254,13 @@ class PokemonCard extends ConsumerWidget {
         ? '${pokemon.name[0].toUpperCase()}${pokemon.name.substring(1)}'
         : '';
 
+    // Observa el estado reactivo del favorito en SQLite en tiempo real (<15ms)
+    final favAsync = ref.watch(isFavoriteProvider(pokemon.id));
+    final isFavorite = favAsync.value ?? pokemon.isFavorite;
+
     return Semantics(
       label:
-          'Ficha técnica ${pokemon.name}, número ${pokemon.id}, tipos ${pokemon.types.join(' y ')}${pokemon.isFavorite ? ', clasificado con clip de favorito' : ''}',
+          'Ficha técnica ${pokemon.name}, número ${pokemon.id}, tipos ${pokemon.types.join(' y ')}${isFavorite ? ', clasificado con clip de favorito' : ''}',
       button: true,
       child: Material(
         color: Colors.transparent,
@@ -275,7 +282,7 @@ class PokemonCard extends ConsumerWidget {
                   right: 8,
                   child: PaperclipWidget(
                     size: 24,
-                    isFavorite: pokemon.isFavorite,
+                    isFavorite: isFavorite,
                     onTap: () => _onToggleFavorite(ref),
                   ),
                 ),
